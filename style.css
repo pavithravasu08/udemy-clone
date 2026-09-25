@@ -18,6 +18,9 @@ body{
     border-bottom: solid black 1px;
     gap: 10px;
     align-items: center;
+	position: sticky;
+    top: 0;
+    z-index: 1;
 
 }
 
@@ -31,7 +34,7 @@ body{
     padding: 10px;
     border: solid black 1px;
     border-radius: 30px;
-    width: 50%;
+    width: 60%;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -56,9 +59,60 @@ body{
     align-items: center;
 }
 
-.categories{
 
+.mylearning{
+    position: relative;
+    cursor: pointer;
+}
+
+.mylearning__card{
+    background-color: white;
+    border: solid black 1px;
+    position: absolute;
+    top: 150%;
+    right: 0;
+    padding: 20px;
+    display: none;
+}
+
+.mylearning:hover .mylearning__card{
+    display: block;
+}
+
+.sale-image{
+    position: relative;
+}
+
+.offercard{
+    background-color: white;
+    border: solid grey 2px;
+    width: 35%;
+    padding: 10px;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+.categories{
     display: flex;
+								  
     padding: 10px;
     border-bottom: solid black 1px;
     justify-content: space-around;
@@ -71,6 +125,11 @@ body{
     padding: 10px;
     border-radius: 30px;
 
+}
+.categories p:hover{
+    background-color: transparent;
+    color: black;
+    transition: 1s;
 }
 
 .sale-image img{
@@ -87,7 +146,9 @@ body{
     margin-top: 10px;
 }
 .course-card{
-    width: 200px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 .course-card img{
     width: 100%;
@@ -128,7 +189,7 @@ body{
 }
 .footer__one{
     display: flex;
-    gap: 10px;
+    gap: 50px;
 }
 
 .footer__one p{
@@ -141,4 +202,24 @@ body{
         display: flex;
         justify-content: space-between;
 
+}
+
+
+@media screen and (max-width: 600px) {
+    .course_card{
+        flex-basis: 40%;
+    }
+    .categories{
+        display: none;
+    }
+    .navbar__s4{
+        display: block;
+    }
+    .navbar__s3{
+        display: none;
+    }
+    .offercard{
+        font-size: 10px;
+    }
+    
 }
