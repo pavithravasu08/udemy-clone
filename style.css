@@ -21,6 +21,7 @@ body{
 	position: sticky;
     top: 0;
     z-index: 1;
+    background-color: white;
 
 }
 
@@ -38,6 +39,7 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
+    
 }
 
 .navbar__s2 input{
@@ -45,6 +47,7 @@ body{
     border: none;
     width: 100%;
     font-size: 16px;
+    background-color: transparent;
 }
 
 .navbar__s2 input:focus{
@@ -59,7 +62,7 @@ body{
     align-items: center;
 }
 
-
+/*My Learning popupp*/
 .mylearning{
     position: relative;
     cursor: pointer;
