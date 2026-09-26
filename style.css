@@ -62,6 +62,10 @@ body{
     align-items: center;
 }
 
+.navbar__s4{
+    display: none;
+}
+
 /*My Learning popupp*/
 .mylearning{
     position: relative;
@@ -209,6 +213,14 @@ body{
 
 }
 
+@media screen and (max-width:800px) {
+
+    body{
+        font-size: 10px;
+
+    }
+    
+}
 
 @media screen and (max-width: 600px) {
     .course_card{
